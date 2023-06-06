@@ -1,16 +1,11 @@
-package com.diseaseDatabase.demo.model;
+package com.diseases.demo.model;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Reg {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	
-	private int userId;  
+public class Signup {
+	@Id 
 	private String uname;
 	private String password;
 	
@@ -18,12 +13,6 @@ public class Reg {
 	private String phonenumber;
 	private String residence;
 	private String role;
-	public int getUserId() {
-		return userId;
-	}
-	public void setUserId(int userId) {
-		this.userId = userId;
-	}
 	public String getUname() {
 		return uname;
 	}
@@ -60,9 +49,4 @@ public class Reg {
 	public void setRole(String role) {
 		this.role = role;
 	}
-	
-	
-	
-	
-
 }

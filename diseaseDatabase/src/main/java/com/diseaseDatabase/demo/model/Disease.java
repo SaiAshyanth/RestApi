@@ -3,11 +3,14 @@
 package com.diseaseDatabase.demo.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
 public class Disease {
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int num;
 	private String name;
 	private String year;

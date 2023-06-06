@@ -3,6 +3,7 @@ package com.diseaseDatabase.demo.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,6 +15,7 @@ import com.diseaseDatabase.demo.service.RegService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
+@CrossOrigin
 public class RegController {
 	@Autowired
     RegService rService;
@@ -30,6 +32,7 @@ public class RegController {
     	List<Reg> dList=rService.getAllUsers();
     	return dList;
     }
+	
 	
 
 }
