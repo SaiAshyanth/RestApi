@@ -3,24 +3,14 @@
 package com.diseaseDatabase.demo.model;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
+
 import jakarta.persistence.Id;
 
 @Entity
 public class Disease {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	
 	private int num;
-	private String name;
-	private String year;
-	private String country;
-	private String symptoms;
-	private String cure;
-	private String death;
-	private String recovered;
-	private String agegrp;
-	private String vaccine;
 	public int getNum() {
 		return num;
 	}
@@ -51,36 +41,12 @@ public class Disease {
 	public void setSymptoms(String symptoms) {
 		this.symptoms = symptoms;
 	}
-	public String getCure() {
-		return cure;
-	}
-	public void setCure(String cure) {
-		this.cure = cure;
-	}
-	public String getDeath() {
-		return death;
-	}
-	public void setDeath(String death) {
-		this.death = death;
-	}
-	public String getRecovered() {
-		return recovered;
-	}
-	public void setRecovered(String recovered) {
-		this.recovered = recovered;
-	}
-	public String getAgegrp() {
-		return agegrp;
-	}
-	public void setAgegrp(String agegrp) {
-		this.agegrp = agegrp;
-	}
-	public String getVaccine() {
-		return vaccine;
-	}
-	public void setVaccine(String vaccine) {
-		this.vaccine = vaccine;
-	}
+	private String name;
+	private String year;
+	private String country;
+	private String symptoms;
+	
+	
 	
 	
 	
