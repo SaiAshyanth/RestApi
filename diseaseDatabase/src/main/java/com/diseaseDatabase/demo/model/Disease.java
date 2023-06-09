@@ -11,6 +11,11 @@ public class Disease {
 	@Id
 	
 	private int num;
+	
+	private String name;
+	private String year;
+	private String country;
+	private String symptoms;
 	public int getNum() {
 		return num;
 	}
@@ -41,10 +46,13 @@ public class Disease {
 	public void setSymptoms(String symptoms) {
 		this.symptoms = symptoms;
 	}
-	private String name;
-	private String year;
-	private String country;
-	private String symptoms;
+	public String getVaccine() {
+		return vaccine;
+	}
+	public void setVaccine(String vaccine) {
+		this.vaccine = vaccine;
+	}
+	private String vaccine;
 	
 	
 	
