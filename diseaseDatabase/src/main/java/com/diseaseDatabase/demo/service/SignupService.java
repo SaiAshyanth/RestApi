@@ -37,11 +37,28 @@ public class SignupService {
 	}
 	
 
-	public Signup update(Signup s) 
-	{
-		
-		return signRep.save(s);
-	}
+	
 
+	public String forgetData(String uname, String password) {
+		 Signup user = signRep.findByuname(uname);
+         if (user == null) {
+             return "No User Found\nPlease Try Again!!!!";
+         } else {
+             // Check if the usernames match in a case-sensitive manner
+             if (user.getUname().equals(uname)) {
+           	  
+//                 if (user.getPassword().equals(password)) {
+//                     return "Login Successful";
+//                 } else {
+//                     return "Login Failed";
+//                 }
+           	  user.setPassword(password);
+                 signRep.save(user);
+           	  return "password has changed successfully";
+             } else {
+                 return "Login Failed";
+             }
+         }
+	}
 
 }

@@ -30,9 +30,11 @@ public class SignupController {
 		 String result = signSer.checkLogin(uname,password);
 		 return result;
 	   }
-	   @PutMapping("/forgetpass")
-	   public Signup update(@RequestBody Signup s)
-	   {
-		   return signSer.update(s);
+	   @PutMapping("/forgotpassword")
+		public String updateRecords (@RequestBody Map<String,String> forgetDataMap) {
+			String uname = forgetDataMap.get("uname");
+			String password = forgetDataMap.get("password");
+			String result = signSer.forgetData(uname, password);
+			return result;
 	   }
 }

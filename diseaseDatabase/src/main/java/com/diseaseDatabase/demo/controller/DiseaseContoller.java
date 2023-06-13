@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.diseaseDatabase.demo.model.Disease;
 import com.diseaseDatabase.demo.service.DiseaseService;
+//import com.example.EducationalLoanPortal.Model.UserModel;
 
 import io.swagger.v3.oas.annotations.tags.Tag;
 @RestController
@@ -50,6 +51,11 @@ public class DiseaseContoller {
       {
     	  disService.deleteDisease(num);
       }
+      @GetMapping("/getdis/{num}")
+  	public Disease getProfile(@PathVariable int num)
+  	{
+  		return disService.getProfile(num);
+  	}
       @Tag(name="Get Method to Sort All Diseases",description="Sort Disease info")
       @GetMapping("/sortDisease/{name}")
       public List<Disease> sortDisease(@PathVariable("name") String name)

@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 
 import com.diseaseDatabase.demo.model.Disease;
 import com.diseaseDatabase.demo.repository.DiseaseRepository;
-
+//import com.example.EducationalLoanPortal.Model.UserModel;
 
 import jakarta.transaction.Transactional;
 
@@ -42,9 +42,16 @@ public class DiseaseService {
 	{
 		disRepository.deleteById(num);
 	}
+	public Disease getProfile(int num) 
+	{
+		
+		Disease u = disRepository.findById(num).get();
+		return u;
+	}
+
 	public List<Disease> sortDisease(String name)
 	{
-		return disRepository.findAll(Sort.by(name).descending());
+		return disRepository.findAll(Sort.by(name).ascending());
 	}
 	public List<Disease> paginate(int num, int size) 
 	{

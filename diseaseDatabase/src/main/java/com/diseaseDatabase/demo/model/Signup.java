@@ -14,8 +14,7 @@ public class Signup {
 	private String password;
 	private String email;
 	private String phonenumber;
-	private String residence;
-	private String role;
+
 	public int getUserid() {
 		return userid;
 	}
@@ -46,19 +45,11 @@ public class Signup {
 	public void setPhonenumber(String phonenumber) {
 		this.phonenumber = phonenumber;
 	}
-	public String getResidence() {
-		return residence;
-	}
-	public void setResidence(String residence) {
-		this.residence = residence;
-	}
-	public String getRole() {
-		return role;
-	}
-	public void setRole(String role) {
-		this.role = role;
-	}
 
+	public void setNewPassword(String newPassword) 
+	{
+	    this.password = newPassword;
+	}
 }
 
 
